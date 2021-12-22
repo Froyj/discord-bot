@@ -2,7 +2,7 @@ require('dotenv').config()
 const Discord = require('discord.js');
 const client = new Discord.Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 const token = process.env.BOT_TOKEN;
-import randomQuote from './Geoffroy/quotes';
+const randomQuote = require('./Geoffroy/quotes');
 
 client.once('ready', () => {
   console.log('Bot launched !');
